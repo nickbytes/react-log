@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 // import './App.css';
 
 import Home from './components/Home';
@@ -12,7 +12,7 @@ const App = () => {
     <Router history={ hashHistory }>
       <Route path="/" component={ Home }>
         <Route path="about" component={ About }></Route>
-        <Route path="log" component={ Log }></Route>
+        <IndexRoute component={ Log }></IndexRoute>
       </Route>
     </Router>
   )
