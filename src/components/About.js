@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import { Container, Heading, Section } from 'rebass';
 
 class About extends Component {
   render() {
     return (
       <div>
-        <h4>The purpose of this project is ⌾</h4>
+        <Container>
+          <Section>
+            <Heading>Purpose</Heading>
+            <p>The purpose of this project is ⌾. Please contemplate that.</p>
+          </Section>
+        </Container>
       </div>
     )
   }
