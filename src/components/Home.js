@@ -16,17 +16,11 @@ class Home extends Component {
       <div className={css(styles.app)}>
 
           <Toolbar>
-            <NavItem is="a">
-              <Link to="/">01–Log</Link>
-            </NavItem>
+            <NavItem is={Link} to="/">01–Log</NavItem>
 
-            <Space
-              auto
-              x={1}
-            />
-            <NavItem is="a">
-              <Link to="/about">About</Link>
-            </NavItem>
+            <Space auto x={1} />
+            
+            <NavItem is={Link} to="/about">About</NavItem>
           </Toolbar>
 
         {this.props.children}
