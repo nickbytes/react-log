@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TableLog from './TableLog';
 import { StyleSheet, css } from 'aphrodite';
+import LogForm from './Logform';
 
 const styles = StyleSheet.create({
   table: {
@@ -32,6 +33,8 @@ class Log extends Component {
 
     return (
       <div>
+        <LogForm />
+
         <table className={css(styles.table)}>
           <thead className={css(styles.thead)}>
             <tr>
