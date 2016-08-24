@@ -19,11 +19,11 @@ class Home extends Component {
             <NavItem is={Link} to="/">01–Log</NavItem>
 
             <Space auto x={1} />
-            
+
             <NavItem is={Link} to="/about">About</NavItem>
           </Toolbar>
 
-        {this.props.children}
+        { React.cloneElement(this.props.children, this.props) }
       </div>
     )
   }

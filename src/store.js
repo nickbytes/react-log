@@ -4,7 +4,11 @@ import { browserHistory } from 'react-router';
 
 import rootReducer from './reducers/index';
 
-const defaultState = {};
+import comments from './data/comments';
+
+const defaultState = {
+  comments
+};
 
 const store = createStore(rootReducer, defaultState);
 
