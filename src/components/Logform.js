@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     padding: '0 20px'
   },
   input: {
-
     fontSize: '3em',
     height: '1.5em'
   },
@@ -25,7 +24,7 @@ class Logform extends Component {
   render() {
     return (
       <div className={css(styles.space_vertical, styles.space_horizontal)}>
-        <Input className={css(styles.input)}/>
+        <Input className={css(styles.input)} name='LogInput' label='Please log activity and press Enter.'/>
       </div>
     )
   }
