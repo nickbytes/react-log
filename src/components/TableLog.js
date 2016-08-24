@@ -36,22 +36,20 @@ const styles = StyleSheet.create({
 
 class TableLog extends Component {
   render() {
-
     return (
       <tr>
-              <td>
-                {this.props.comment.id}
-              </td>
-              <td>
-                {this.props.comment.date}
-              </td>
-              <td>
-                {this.props.comment.location}
-              </td>
-              <td>
-                {this.props.comment.text}
-              </td>
-
+        <td className={css(styles.td)}>
+          {this.props.comment.id}
+        </td>
+        <td className={css(styles.td)}>
+          {this.props.comment.date}
+        </td>
+        <td className={css(styles.td)}>
+          {this.props.comment.location}
+        </td>
+        <td className={css(styles.td)}>
+          {this.props.comment.text}
+        </td>
       </tr>
     )
   }
