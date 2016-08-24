@@ -9,7 +9,21 @@ const styles = StyleSheet.create({
       lineHeight: 1.25,
       borderCollapse: 'separate',
       borderSpacing: 0,
-      width: '100%'
+      width: '100%',
+      margin: '0 auto',
+      padding: '0 20px'
+  },
+  thead: {
+    textAlign: 'center'
+  },
+  th: {
+    textAlign: 'left',
+    verticalAlign: 'bottom',
+    padding: '20px',
+    paddingLeft: 0,
+    borderBottomStyle: 'solid',
+    borderBottomWidth: 2,
+    borderColor: 'inherit'
   }
 });
 
@@ -19,12 +33,12 @@ class Log extends Component {
     return (
       <div>
         <table className={css(styles.table)}>
-          <thead>
+          <thead className={css(styles.thead)}>
             <tr>
-              <th>ID</th>
-              <th>Date</th>
-              <th>Location</th>
-              <th>Text</th>
+              <th className={css(styles.th)}>ID</th>
+              <th className={css(styles.th)}>Date</th>
+              <th className={css(styles.th)}>Location</th>
+              <th className={css(styles.th)}>Text</th>
             </tr>
           </thead>
           <tbody>
