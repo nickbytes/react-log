@@ -19,7 +19,7 @@ const comments = [
   },
   {
     id: 4,
-    text: 'Made ramen today',
+    text: 'Made ramen today. And by "made ramen", I definitely mean that I ordered ramen. But i ate it and it was very very good.',
     location: 'NYC',
     date: 'Yesterday'
   },
