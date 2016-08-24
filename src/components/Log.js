@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TableLog from './TableLog';
-import _ from 'lodash';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -29,7 +28,7 @@ class Log extends Component {
             </tr>
           </thead>
           <tbody>
-            {   this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
+            { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
           </tbody>
         </table>
       </div>
