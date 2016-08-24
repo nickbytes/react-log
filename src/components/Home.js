@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import { Toolbar, NavItem, Space, Section } from 'rebass';
 import hello from 'hello-color';
 import bikeshed from '@jxnblk/bikeshed';
+import '../App.css';
 
 const origColor = bikeshed()
 const helloColor = hello(origColor)
