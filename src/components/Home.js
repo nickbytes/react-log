@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
         fontFamily: 'Fira Mono',
         color: helloColor.base,
         backgroundColor: helloColor.color
+    },
+    space_vertical: {
+      padding: '20px 0'
     }
 });
 
@@ -31,9 +34,9 @@ class Home extends Component {
             <NavItem is={Link} to="/about">About</NavItem>
           </Toolbar>
 
-          <Section>
+          <div className={css(styles.space_vertical)}>
             { React.cloneElement(this.props.children, this.props) }
-          </Section>
+          </div>
       </div>
     )
   }

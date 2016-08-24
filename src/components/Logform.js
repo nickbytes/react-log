@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { Input } from 'rebass';
 
 const styles = StyleSheet.create({
   form: {
@@ -7,17 +8,25 @@ const styles = StyleSheet.create({
     padding: '0 20px'
   },
   input: {
-    border: '0',
+
+    fontSize: '3em',
+    height: '1.5em'
+  },
+  space_vertical: {
+    paddingTop: '20px'
+  },
+  space_horizontal: {
+    paddingLeft: '20px',
+    paddingRight: '20px'
   }
 });
 
 class Logform extends Component {
   render() {
-
     return (
-      <form className={css(styles.form)}>
-        <input className={css(styles.input)} type="text" placeholder="Fixed X in fun project"></input>
-      </form>
+      <div className={css(styles.space_vertical, styles.space_horizontal)}>
+        <Input className={css(styles.input)}/>
+      </div>
     )
   }
 }
