@@ -26,6 +26,8 @@ class Logform extends Component {
       <div className={css(styles.space_vertical, styles.space_horizontal)}>
         <Input className={css(styles.input)} name='LogInput' label='Please log activity and press Enter.'/>
       </div>
+
+
     )
   }
 }

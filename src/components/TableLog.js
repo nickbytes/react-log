@@ -45,9 +45,6 @@ class TableLog extends Component {
           {this.props.comment.date}
         </td>
         <td className={css(styles.td)}>
-          {this.props.comment.location}
-        </td>
-        <td className={css(styles.td)}>
           {this.props.comment.text}
         </td>
       </tr>
