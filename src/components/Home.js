@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { StyleSheet, css } from 'aphrodite';
-import { Toolbar, NavItem, Space, Section } from 'rebass';
+import { Toolbar, NavItem, Space } from 'rebass';
 import hello from 'hello-color';
 import bikeshed from '@jxnblk/bikeshed';
 import '../App.css';
@@ -11,10 +11,10 @@ const helloColor = hello(origColor)
 
 const styles = StyleSheet.create({
     app: {
-        fontSize: '14px',
-        fontFamily: 'Fira Mono',
-        color: helloColor.base,
-        backgroundColor: helloColor.color
+      fontSize: '14px',
+      fontFamily: 'Fira Mono',
+      color: helloColor.base,
+      backgroundColor: helloColor.color
     },
     space_vertical: {
       padding: '20px 0'

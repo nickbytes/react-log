@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TableLog from './TableLog';
 import { StyleSheet, css } from 'aphrodite';
 import LogForm from './Logform';
+import NoEntries from './NoEntries';
 
 const styles = StyleSheet.create({
   table: {
@@ -28,12 +29,16 @@ const styles = StyleSheet.create({
   }
 });
 
+
+
 class Log extends Component {
   render() {
 
     return (
       <div>
         <LogForm />
+
+        {/* need and if statement here that says 'if there are comments, render this table' */}
 
         <table className={css(styles.table)}>
           <thead className={css(styles.thead)}>
@@ -48,6 +53,12 @@ class Log extends Component {
             { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
           </tbody>
         </table>
+
+        {/* else, render this NoEntries component with instructions to get started */}
+
+        <NoEntries />
+
+        {/* end if */}
       </div>
     )
   }

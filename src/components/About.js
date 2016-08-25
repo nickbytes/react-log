@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Heading, SectionHeader } from 'rebass';
+import { Container, SectionHeader } from 'rebass';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
