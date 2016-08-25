@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     maxWidth: '600px',
     margin: '0 auto',
     padding: '20px'
+  },
+  section: {
+    padding: '20px 0'
   }
 })
 
@@ -15,12 +18,12 @@ class About extends Component {
     return (
       <div className={css(styles.narrow)}>
         <Container>
-          <div>
+          <div className={css(styles.section)}>
             <SectionHeader>Purpose</SectionHeader>
             <p>The purpose of this project is ⌾. Please contemplate that.</p>
           </div>
 
-          <div>
+          <div className={css(styles.section)}>
             <SectionHeader>A bit about your data.</SectionHeader>
             <p>I don't have access to any of your data, it is stored on your computer using the help of your web browser. I don't want all that responsibility.</p>
           </div>
