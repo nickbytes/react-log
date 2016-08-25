@@ -36,28 +36,32 @@ class Log extends Component {
 
     return (
       <div>
+
         <LogForm />
 
-        {/* need and if statement here that says 'if there are comments, render this table' */}
+          {(() => {
+            switch (this.props.comments.length) {
+              case 0:   return <NoEntries />;
+              default:  return (
+                <table className={css(styles.table)}>
+                  <thead className={css(styles.thead)}>
+                    <tr>
+                      <th className={css(styles.th)}>ID</th>
+                      <th className={css(styles.th)}>Date</th>
+                      <th className={css(styles.th)}>Text</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
+                  </tbody>
+                </table>
+              );
+            }
+          })()}
 
-        <table className={css(styles.table)}>
-          <thead className={css(styles.thead)}>
-            <tr>
-              <th className={css(styles.th)}>ID</th>
-              <th className={css(styles.th)}>Date</th>
-              <th className={css(styles.th)}>Text</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
-          </tbody>
-        </table>
 
-        {/* else, render this NoEntries component with instructions to get started */}
 
-        <NoEntries />
 
-        {/* end if */}
       </div>
     )
   }
