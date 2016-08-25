@@ -29,14 +29,11 @@ const styles = StyleSheet.create({
   }
 });
 
-
-
 class Log extends Component {
   render() {
 
     return (
       <div>
-
         <LogForm />
 
           {(() => {
@@ -58,10 +55,6 @@ class Log extends Component {
               );
             }
           })()}
-
-
-
-
       </div>
     )
   }
