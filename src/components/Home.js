@@ -18,6 +18,16 @@ const styles = StyleSheet.create({
     },
     space_vertical: {
       padding: '20px 0'
+    },
+    dirty: {
+      position: 'absolute',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      zIndex: '-1',
+      backgroundColor: helloColor.color,
+      minHeight: '100vh'
     }
 });
 
@@ -25,6 +35,7 @@ class Home extends Component {
   render() {
     return (
       <div className={css(styles.app)}>
+          <div className={css(styles.dirty)}></div>
 
           <Toolbar color={helloColor.color} backgroundColor={helloColor.base}>
             <NavItem is={Link} to="/">01–Log</NavItem>
