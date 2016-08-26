@@ -7,7 +7,7 @@ import bikeshed from '@jxnblk/bikeshed';
 import '../App.css';
 
 const origColor = bikeshed()
-const helloColor = hello(origColor)
+export const helloColor = hello(origColor)
 
 const styles = StyleSheet.create({
     app: {
