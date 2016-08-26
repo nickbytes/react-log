@@ -1,16 +1,17 @@
 import { createStore, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
+import { loadState, saveState } from './localStorage';
 
 import rootReducer from './reducers/index';
 
-import comments from './data/comments';
+const persistedState = loadState()
 
-const defaultState = {
-  comments: comments
-};
+const store = createStore(rootReducer, persistedState);
 
-const store = createStore(rootReducer, defaultState);
+store.subscribe(() => {
+  saveState(store.getState());
+})
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
