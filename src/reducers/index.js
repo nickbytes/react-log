@@ -3,7 +3,6 @@ import { routerReducer } from 'react-router-redux';
 
 import comments from './comments';
 
-const rootReducer = combineReducers({
-  comments, routing: routerReducer });
+const rootReducer = combineReducers({ comments, routing: routerReducer });
 
 export default rootReducer;

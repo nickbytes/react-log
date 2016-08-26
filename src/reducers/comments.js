@@ -1,7 +1,16 @@
 function comments(state = [], action) {
-  console.log('adding a comment')
-  console.log(state, action)
-  return state;
+  switch (action.type) {
+    case 'ADD_COMMENT':
+      return [...state,{
+        id: action.id,
+        text: action.text,
+        date: action.date
+      }];
+    default:
+      return state;
+  }
 }
+
+
 
 export default comments;

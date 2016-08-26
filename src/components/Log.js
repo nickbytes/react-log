@@ -34,7 +34,7 @@ class Log extends Component {
 
     return (
       <div>
-        <LogForm />
+        <LogForm {...this.props}/>
 
           {(() => {
             switch (this.props.comments.length) {
