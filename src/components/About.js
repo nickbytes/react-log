@@ -25,7 +25,8 @@ class About extends Component {
 
           <div className={css(styles.section)}>
             <SectionHeader>A bit about your data.</SectionHeader>
-            <p>I don't have access to any of your data, it is stored on your computer using the help of your web browser. I don't want all that responsibility.</p>
+            <p>I don't have access to any of your data, it is stored on your computer using the help of your web browser. </p>
+            <p>This feature has not been implemented yet.</p>
           </div>
         </Container>
       </div>
