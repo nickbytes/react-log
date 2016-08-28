@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     color: helloColor.base,
     fontFamily: 'Fira Mono',
     width: '100%',
-    padding: '10px 20px',
+    fontSize: '1.1em',
+    padding: '5px 10px',
     marginTop: '10px',
     marginBottom: '20px',
     border: '0',
-    fontSize: '3em',
     lineHeight: '1.5em',
     '-webkit-box-sizing': 'border-box',
     '-moz-box-sizing': 'border-box',
@@ -47,6 +47,12 @@ const styles = StyleSheet.create({
        opacity: '0.3'
     }
   },
+  big: {
+    '@media (min-width: 600px)': {
+      fontSize: '3em',
+      padding: '10px 20px',
+    }
+  },
   label: {
     Bottom: '10px'
   }
@@ -71,7 +77,7 @@ class Logform extends Component {
       <div className={css(styles.space_vertical, styles.space_horizontal)}>
         <form ref="commentForm" onSubmit={this.handleSubmit}>
           <label className={css(styles.label)} htmlFor="myRefString">Type your event and press Enter ⏎.</label>
-          <input className={css(styles.input)} type="text" id="myRefString" ref="myRefString" placeholder="Added Feature X to Fun Project Y."/>
+          <input className={css(styles.input, styles.big)} type="text" id="myRefString" ref="myRefString" placeholder="Added Feature X to Fun Project Y."/>
           <input type="submit" hidden />
         </form>
       </div>
