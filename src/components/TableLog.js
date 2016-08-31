@@ -47,6 +47,9 @@ class TableLog extends Component {
         <td className={css(styles.td)}>
           {this.props.comment.text}
         </td>
+        <td>
+          <button onClick={this.props.removeComment.bind(null, this.props.comment.id, this.props.i)}>X</button>
+        </td>
       </tr>
     )
   }
