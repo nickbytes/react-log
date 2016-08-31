@@ -49,7 +49,7 @@ class Log extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ) }
+                    { this.props.comments.map((comment, i) => <TableLog {...this.props} key={i} i={i} comment={comment} /> ).reverse() }
                   </tbody>
                 </table>
               );
