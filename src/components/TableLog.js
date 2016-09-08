@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { X } from 'reline';
+import { helloColor } from './Home';
 
 const styles = StyleSheet.create({
     table: {
@@ -22,16 +24,17 @@ const styles = StyleSheet.create({
     },
 
     td: {
-      padding: '5px',
+      padding: '5px 20px',
       paddingLeft: 0,
       borderBottomStyle: 'solid',
       borderBottomWidth: 1,
       borderColor: 'inherit'
     },
-
-    tr: {
-
-    }
+    closeButton: {
+      border: 0,
+      background: 'none',
+      color: helloColor.base
+    },
 });
 
 class TableLog extends Component {
@@ -47,8 +50,8 @@ class TableLog extends Component {
         <td className={css(styles.td)}>
           {this.props.comment.text}
         </td>
-        <td>
-          <button onClick={this.props.removeComment.bind(null, this.props.comment.id, this.props.i)}>X</button>
+        <td className={css(styles.td)}>
+          <button onClick={this.props.removeComment.bind(null, this.props.comment.id, this.props.i)} className={css(styles.closeButton)}><X className={css(styles.centerIcon)}/></button>
         </td>
       </tr>
     )
