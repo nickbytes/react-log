@@ -14,8 +14,8 @@ const router = (
     <Provider store={ store }>
       <Router history={ history }>
         <Route path="/" component={ App }>
-          <Route path="about" component={ About }></Route>
-          <IndexRoute component={ Log }></IndexRoute>
+          <IndexRoute component={ Log }/>
+          <Route path="about" component={ About }/>
         </Route>
       </Router>
     </Provider>
