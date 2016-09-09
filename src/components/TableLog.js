@@ -33,7 +33,10 @@ const styles = StyleSheet.create({
     closeButton: {
       border: 0,
       background: 'none',
-      color: helloColor.base
+      color: helloColor.base,
+      ':hover' : {
+        cursor: 'pointer'
+      }
     },
 });
 
@@ -41,9 +44,6 @@ class TableLog extends Component {
   render() {
     return (
       <tr>
-        <td className={css(styles.td)}>
-          {this.props.comment.id}
-        </td>
         <td className={css(styles.td)}>
           {this.props.comment.date}
         </td>
