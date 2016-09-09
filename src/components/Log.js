@@ -6,7 +6,7 @@ import NoEntries from './NoEntries';
 
 const styles = StyleSheet.create({
   table: {
-      fontSize: '14px',
+      fontSize: '10px',
       fontFamily: 'Fira Mono',
       lineHeight: 1.25,
       borderCollapse: 'separate',
@@ -14,6 +14,16 @@ const styles = StyleSheet.create({
       width: '100%',
       margin: '0 auto',
       padding: '0 20px'
+  },
+  tableMed: {
+    '@media (min-width: 600px)': {
+      fontSize: '14px'
+    }
+  },
+  tableLg: {
+    '@media (min-width: 900px)': {
+      fontSize: '18px'
+    }
   },
   thead: {
     textAlign: 'center'
@@ -40,7 +50,7 @@ class Log extends Component {
             switch (this.props.comments.length) {
               case 0:   return <NoEntries />;
               default:  return (
-                <table className={css(styles.table)}>
+                <table className={css(styles.table, styles.tableMed, styles.tableLg)}>
                   <thead className={css(styles.thead)}>
                     <tr>
                       <th className={css(styles.th)}>Date</th>
