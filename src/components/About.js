@@ -33,7 +33,7 @@ class About extends Component {
 
           <div className={css(styles.section)}>
             <h3 className={css(styles.sectionHeader)}>A bit about your data.</h3>
-            <p>I don't have access to any of your data, it is stored on your computer using the help of your web browser and a feature called 'localstorage'. </p>
+            <p>I don't have access to any of your data, it is stored on your computer using the help of your web browser and a feature called <a className={css(styles.link)} href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localstorage</a>. </p>
           </div>
 
           <div className={css(styles.section)}>
