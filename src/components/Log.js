@@ -43,7 +43,6 @@ class Log extends Component {
                 <table className={css(styles.table)}>
                   <thead className={css(styles.thead)}>
                     <tr>
-                      <th className={css(styles.th)}>ID</th>
                       <th className={css(styles.th)}>Date</th>
                       <th className={css(styles.th)}>Text</th>
                       <th className={css(styles.th)}>Delete</th>
